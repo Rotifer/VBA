@@ -1,0 +1,87 @@
+' The base of VBA is Subs and Functions.
+' A example of a Sub:
+Private Sub example()
+MsgBox "Hello World!"
+End Sub
+' This code show a dialog with a message, "Hello World!".
+' Functions it's similar:
+Private Function examp2()
+MsgBox "This dialog is created by a Function."
+End Function
+' This show other dialog with other message.
+' Also exist Data Types:
+' String: A text.
+'A variable-length string may contain up to approximately 2 billion (2 ^ 31) characters.
+' fixed-length string can contain from 1 to approximately 64K (2 ^ 16) characters.
+' Long: Long (long integer) variables are stored as 32-bit (4-byte) numbers, flagged, in the range of -2,147,483,648 to 2,147,483,647.
+' Boolean: Boolean variables are stored as 16-bit (2-byte) numbers, but can only be True or False.
+' Date: Date variables are stored as 64-bit (8-byte) floating-point IEEE numbers representing dates
+' that range from January 1, 100, to December 31, 9999, and the times from 0:00:00 to 11:59: 59. 
+' Any recognizable date literal value can be assigned to Date variables.
+' The date literals must be between signs (#), for example, # 1 January 1993 # or # 1 Jan 93 #.
+' Currency: Currency variables are stored as 64-bit (8-byte) numbers in an integer format, in the scale of 10,000 
+' to provide a fixed-point number with 15 digits to the left of the decimal point and 4 digits to the right. 
+' This representation provides a range from -922,337,203,685,477,5808 to 922,337,203,685,477,5807.
+' Single: Single (single-precision floating point) variables are stored as 32-bit floating point (4-byte)
+' IEEE numbers with a value in the range of -3.402823E38 to -1.401298E-45 for negative values and 1.401298E-45 
+' to 3.402823E38 for positive values.
+' Byte: Byte variables are stored as 8-bit (1 byte), single, unsigned numbers, ranging in value from 0 to 255.
+' Double: Double (double precision floating point) variables are stored as 64-bit (8-byte) floating-point IEEE numbers, 
+' ranging from -1.79769313486232E308 to -4.94065645841247E-324 for negative values and 4.94065645841247E -324 
+' to 1.79769313486232E308 for positive values.
+' Object: Object variables are stored as 32-bit (4-byte) addresses that refer to objects.
+' Using the Set statement, a variable declared as an Object can have any reference to the object assigned to it.
+' Note: Although a variable declared with type Object is flexible enough to contain a reference to any object,
+' the binding to the object to which that variable references is always later (binding at run time).
+' Integer: Integer variables are stored as 16-bit (2-byte) numbers in the range of -32,768 to 32,767.
+' Integer variables can also be used to represent enumerated values. 
+' An enumerated value can contain a finite set of unique integers, each with a special meaning in the 
+' context in which it is used. The enumerated values provide a convenient way to select 
+' from a known number of options, for example, black = 0, white = 1, and so on.
+' Decimal: Decimal variables are stored as signed, 96-bit (12-byte) integers, scaled by a 10-variable power.
+' The power scaling factor of 10 specifies the number of digits to the right of the decimal point 
+' and ranges from 0 to 28. With a scale of 0 (without decimals), the highest possible value is 
+' +/- 79,228,162,514,264,337,593,543 .950,335. At 28 decimal places, the highest value is
+' +/- 7.9228162514264337593543950335 and the smallest non-zero value is +/- 0.0000000000000000000000000001.
+' Variant: The Variant data type is the data type for all variables that are not explicitly declared 
+' as some other type (using statements such as Dim, Private, Public, or Static). The Variant data type 
+' does not have a type declaration character.
+
+' A Variant is a special type of data that can hold any data type except fixed-length String data. 
+' (Variant types now support user-defined types.) A Variant can also contain the special values 
+' Empty, Error, Nothing, and Null. You can determine how the data in a Variant is handled by using the VarType or TypeName function.
+' The numeric data may be any integer or real value in the range of -1.797693134862315E308 to -4.94066E-324 
+' for negative values and of 4.94066E-324 to 1.797693134862315E308 for positive values. Generally Variant 
+' numeric data is kept in its original data type within Variant. For example, if you assign an Integer to a 
+' Variant, the subsequent operations treat Variant as an Integer. However, if an arithmetic operation 
+' is performed on a Variant that contains a Byte, an Integer, a Long, or a Single and the result 
+' exceeds the normal range for the original data type, the result will be promoted within the 
+' Variant to the next larger type Of data. A Byte is promoted to an Integer, an Integer is 
+' promoted to a Long, and a Long and a Single are promoted to a Double. An error occurs when Variant 
+' variables containing Currency, Decimal, and Double values exceed their respective ranges.
+
+' You can use the Variant data type instead of any data type to work with data in a more flexible way. 
+' If the contents of a Variant variable are digits, they may be the representation of the digits
+' in the sequence or their actual value, depending on the context. For example:
+
+Sub dimexamp()
+Dim MyVar As Variant
+MyVar = 98052
+'...
+End Sub
+
+' In the previous example, MyVar contains a numeric representation-the actual value 98052. 
+' Arithmetic operators work as expected on Variant variables that contain numeric values or string data 
+' that can be interpreted as numbers. If you use the + operator to add MyVar to another Variant
+' that contains a number or a variable of a numeric type, the result will be an arithmetic sum.
+
+' The Empty value denotes a Variant variable that was not initialized (assigned an initial value). 
+' A Variant that contains Empty will be 0 if it is used in a numeric context, 
+' and a zero-length string ( "") if it is used in a sequence context.
+
+' Do not confuse Empty with Null. Null indicates that the Variant variable does not intentionally contain valid data.
+
+In a Variant, Error is a special value used to indicate that an error condition has occurred in
+' a procedure. However, unlike other types of errors, application-level error handling does not occur.
+' This allows you or the application itself to perform some alternative action based on the error value. 
+' Error values are created by converting real numbers to error values using the CVErr function.
