@@ -17,11 +17,13 @@ Once I have finished, I will post an extensive blog on the subject.
 I have uploaded two __.bas_ module files and two _.cls_ class files.
 
 1. __clsSet.cls__: This contains the set logic code and is the key file.
-1. __clsTestSet__: Testing code for the main class file. Trying to implement a poor man's unit testing in VBA 🤪 . I have tried RubberDuck but not working.
+1. __clsTestSet__: Testing code for the main class file. Trying to implement a poor man's unit testing in VBA 🤪.*
 1. __modTest_clsSets__: Creates the class instance for testing and calls the test routines.
 1. __SetUDFs.bas__: User-defined functions that use the main class and that can be called in Excel.
 
+\* Before you ask, yes, I have tried RubberDuck but it is not working for me. Might be because I do my VBA work on a locked down work laptop 🤷‍♂️
 
+  
 I have also uploaded the macro-enabled Excel file and it contains all the code, name __Sets.xlsm__.
 ### TODO - lots! 
 
