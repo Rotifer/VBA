@@ -23,12 +23,15 @@ I have uploaded two __.bas_ module files and two _.cls_ class files.
 
 
 I have also uploaded the macro-enabled Excel file and it contains all the code, name __Sets.xlsm__.
-### TODO - lots!
+### TODO - lots! 
 
+- Not yet finished! __⚠️__
 - The code is not yet fully implemented or documented.
 - I will write a longer explanation of how this works in a blog once I have finished the coding.
 
 
-[Now blogging here](https://rotifer.github.io/) they
+## Blogging ℹ️ 
+
+[Now blogging here](https://rotifer.github.io/)
 
 
