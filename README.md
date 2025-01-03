@@ -6,7 +6,7 @@ However, sometimes it is easier and cleaner to implement something in VBA.
 ## Set Operations - Implementing them in VBA 😬
 
 Something I find painful in Excel is the absence of _set_ logic. In SQL we have operators such as UNION, EXCEPT, and INTERSECT and they are super useful. 
-I have seen implementations of these in Excel using combinations of FILTER, MATCH match and so on in LAMBDAs. They implementations might be clever 
+I have seen implementations of these in Excel using combinations of FILTER, MATCH and so on in LAMBDAs. They implementations might be clever 
 but they are not clear or intuitive to me. 
 
 As a challenge, I decided to try to implement them in VBA using dictionaries. The implementations are not yet complete but I am making progress.
