@@ -21,6 +21,8 @@ I have uploaded two __.bas_ module files and two _.cls_ class files.
 1. __modTest_clsSets__: Creates the class instance for testing and calls the test routines.
 1. __SetUDFs.bas__: User-defined functions that use the main class and that can be called in Excel.
 
+
+I have also uploaded the macro-enabled Excel file and it contains all the code, name __Sets.xlsm__.
 ### TODO - lots!
 
 - The code is not yet fully implemented or documented.
