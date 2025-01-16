@@ -30,13 +30,13 @@ End Sub
 
 Sub RunCopySheetUsedRng()
     Dim pathToInputXLFile As String
-    Dim pathToOutputXLFile As String: pathToOutputXLFile = "C:\Users\mfm45656\pdf_parsing\output_files\reef_1_concatenated"
+    Dim pathToOutputXLFile As String: pathToOutputXLFile = "<path>\concatenated_file.xlsx"
     Dim fromSheetName As String: fromSheetName = "Sheet1"
     Dim toSheetName As String: toSheetName = "Sheet1"
     Dim i As Integer
     Application.ScreenUpdating = False
     For i = 1 To 609
-        pathToInputXLFile = "C:\Users\mfm45656\pdf_parsing\output_files\table_" & i & ".xlsx"
+        pathToInputXLFile = "<path_to_files>\table_" & i & ".xlsx"
         Call CopySheetUsedRng(pathToInputXLFile, fromSheetName, pathToOutputXLFile, toSheetName)
     Next i
     Application.ScreenUpdating = True
